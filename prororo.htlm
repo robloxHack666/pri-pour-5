@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon Halloween - Discord</title>
+    <style>
+        /* Style général de la page */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #2c1a04 0%, #110701 100%);
+            font-family: 'Arial Black', Gadget, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Message de bienvenue Halloween personnalisé */
+        .halloween-title {
+            color: #ff7900;
+            font-size: 36px; /* Légèrement réduit pour que la longue phrase tienne bien */
+            text-transform: none; /* Désactivé pour conserver le style exact de vos caractères */
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px #ff7900, 0 0 20px #ff4500, 3px 3px 0px #000;
+            animation: pulse 2s infinite ease-in-out;
+            text-align: center;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        /* Conteneur pour le bouton et ses décorations */
+        .button-container {
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+        }
+
+        /* Style du bouton Discord */
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #5865F2;
+            text-decoration: none;
+            border: 3px solid #ff7900;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 121, 0, 0.4);
+        }
+
+        .discord-btn:hover {
+            background-color: #ff7900;
+            color: #000000;
+            border-color: #5865F2;
+            box-shadow: 0 0 25px #ff7900;
+            transform: scale(1.05);
+        }
+
+        /* Décorations de citrouilles */
+        .pumpkin-decor {
+            position: absolute;
+            font-size: 35px;
+            pointer-events: none;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .pumpkin-left { left: -55px; top: 12px; animation-delay: 0s; }
+        .pumpkin-right { right: -55px; top: 12px; animation-delay: 1.5s; }
+
+        /* Toiles d'araignée aux coins */
+        .spider-web {
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.3;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .top-left { top: 10px; left: 10px; }
+        .top-right { top: 10px; right: 10px; transform: scaleX(-1); }
+        .bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); }
+        .bottom-right { bottom: 10px; right: 10px; transform: scale(-1); }
+
+        /* Chauves-souris en arrière-plan */
+        .bat {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1;
+            animation: fly 8s infinite linear;
+        }
+
+        /* Différentes trajectoires pour les chauves-souris */
+        .bat1 { top: 15%; left: -10%; animation-duration: 9s; animation-delay: 0s; }
+        .bat2 { top: 40%; left: -10%; animation-duration: 12s; animation-delay: 3s; }
+        .bat3 { top: 70%; left: -10%; animation-duration: 7s; animation-delay: 1.5s; }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(10deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); text-shadow: 0 0 15px #ff7900, 0 0 30px #ff4500; }
+        }
+
+        /* Animation de vol */
+        @keyframes fly {
+            0% {
+                left: -10%;
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-30px) scale(1.2);
+            }
+            100% {
+                left: 110%;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toiles d'araignée de fond -->
+    <div class="spider-web top-left">🕸️</div>
+    <div class="spider-web top-right">🕸️</div>
+    <div class="spider-web bottom-left">🕸️</div>
+    <div class="spider-web bottom-right">🕸️</div>
+
+    <!-- Chauves-souris volantes -->
+    <div class="bat bat1">🦇</div>
+    <div class="bat bat2">🦇</div>
+    <div class="bat bat3">🦇</div>
+
+    <!-- Message personnalisé -->
+    <h1 class="halloween-title">🎃 𝖇𝖔𝖓 𝖍𝖆𝖑𝖑𝖔𝖜𝖊𝖊𝖓 𝖙𝖔𝖚𝖙 𝖑𝖊 𝖒𝖔𝖓𝖉𝖊 🎃</h1>
+
+    <!-- Zone du bouton -->
+    <div class="button-container">
+        <span class="pumpkin-decor pumpkin-left">🎃</span>
+        <a href="https://discord.gg/BheghVbvd" target="_blank" class="discord-btn">
+            Rejoindre le Discord
+        </a>
+        <span class="pumpkin-decor pumpkin-right">🎃</span>
+    </div>
+
+</body>
+</html>
